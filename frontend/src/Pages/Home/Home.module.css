@@ -1,0 +1,197 @@
+.hero {
+	position: relative;
+	overflow-x: hidden;
+	display: flex;
+	justify-content: end;
+	padding-top: 30px;
+}
+
+.heroContent {
+	width: 100%;
+	position: absolute;
+	left: 0%;
+	top: 50%;
+	transform: translate(0%, -50%);
+	color: white;
+}
+
+.heroText {
+	font-size: 4rem;
+	font-weight: bold;
+	white-space: nowrap;
+	color: #36436a;
+}
+
+.heroText p {
+	margin-bottom: 0px;
+}
+
+.heroText:first-of-type {
+	animation: showup 4s;
+}
+
+.heroText:last-of-type {
+	animation: reveal 4s;
+}
+
+.heroText:last-of-type p {
+	margin-left: 0px;
+	animation: slidein 4s;
+}
+
+@keyframes showup {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slidein {
+	0% {
+		margin-left: -800px;
+	}
+	20% {
+		margin-left: -800px;
+	}
+	35% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: 0px;
+	}
+}
+
+@keyframes reveal {
+	0% {
+		opacity: 0;
+		width: 0px;
+	}
+	20% {
+		opacity: 1;
+		width: 0px;
+	}
+	30% {
+		width: 100%;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		width: 100%;
+	}
+}
+
+.signup {
+	position: relative;
+	color: white;
+	width: 100px;
+	font-size: 1.5rem;
+	font-weight: 600;
+	padding: 8px 16px;
+	text-decoration: none;
+	border-radius: 24px;
+}
+
+.signup::before,
+.signup::after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #39c6b5;
+	z-index: -1;
+	border-radius: 24px;
+}
+
+.signup::after {
+	opacity: 0;
+	background-image: linear-gradient(90deg, #39c6b5 0%, #067bc2 100%);
+	transition: opacity.3s ease-in-out;
+}
+
+.signup:hover::after {
+	opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+	.heroText {
+		font-size: 1.5rem;
+	}
+	.signup {
+		font-size: 1rem;
+	}
+}
+
+.heroImageDiv {
+	width: 45%;
+}
+
+.heroImageDiv img {
+	width: 100%;
+}
+
+.cardText {
+	font-size: 13px;
+}
+
+.cardHeading {
+	font-size: 22px;
+}
+
+.titleBar {
+	margin-block: 80px;
+}
+
+.titleTag {
+	color: #067bc2;
+	font-size: 12px;
+	text-decoration: none;
+	border-radius: 25px;
+}
+
+.flag {
+	cursor: pointer;
+	border-radius: 10px;
+	transition: all 0.2s ease-in-out;
+}
+
+.flag:hover {
+	transform: scale(1.02, 1.05);
+}
+
+.universityTitle {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 22px;
+	color: #067bc2;
+}
+
+.universityFname {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 134%;
+	color: #000000;
+}
+
+.universityCard {
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.universityCard:hover {
+	transform: translateY(-10px);
+}

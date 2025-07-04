@@ -1,0 +1,46 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"Vsxf7z4U3f\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Applications</span>\",\"col\":12}},{\"id\":\"PWYRW3vrYW\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Applications\",\"col\":4}},{\"id\":\"ME6-RtfJzi\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"New Application\",\"col\":4}},{\"id\":\"b5_JFh28ta\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"To-Do\",\"col\":4}}]",
+ "creation": "2024-07-05 12:49:43.697130",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "file",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Applications",
+ "links": [],
+ "modified": "2024-07-13 11:16:17.439648",
+ "modified_by": "Administrator",
+ "module": "Rawscholar",
+ "name": "Applications",
+ "number_cards": [
+  {
+   "label": "New Application",
+   "number_card_name": "New Application"
+  },
+  {
+   "label": "Applications",
+   "number_card_name": "Application"
+  },
+  {
+   "label": "To-Do",
+   "number_card_name": "TO-DO"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Application Staff"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [],
+ "title": "Applications"
+}

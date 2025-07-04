@@ -1,0 +1,23 @@
+.searchBox {
+  width: 550px;
+  padding: 5px 15px;
+  border: 1px solid #067bc2;
+  outline: none;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .searchBox{
+    width: 90%;
+  }
+}
+
+.search {
+  background-color: #067bc2;
+  border: none;
+  border-radius: 8px;
+}
+
+.navButton {
+  width: 100px;
+}

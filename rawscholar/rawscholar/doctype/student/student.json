@@ -1,0 +1,215 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:email",
+ "creation": "2024-06-10 09:34:21.721338",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "address",
+  "dob",
+  "gender",
+  "status",
+  "country",
+  "password",
+  "column_break_dleh",
+  "email",
+  "phone",
+  "qualifications",
+  "custom_qualification_html",
+  "passport_no",
+  "attachments_section",
+  "photo",
+  "files",
+  "notes_tab",
+  "notes",
+  "notes_html",
+  "activities_tab",
+  "open_activities_html",
+  "all_activities_section",
+  "all_activities_html",
+  "others_tab",
+  "interested_courses"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "DOB"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "--select--\nMale\nFemale"
+  },
+  {
+   "default": "New",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "New\nCounsellor assigned\nCourse shortlisted\nDocuments collected\nApplication forwarded\nApplication submitted\nOffer Received/Rejected\nOffer accepted by student\nFee payment if any\nEnrolment and verification completed\nVisa checklist Given to students\nVisa Documentation Finished\nVisa submission\nVisa approved / Rejected\nTravel date"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Countries"
+  },
+  {
+   "fieldname": "column_break_dleh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "unique": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "columns": 4,
+   "fieldname": "qualifications",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Qualifications",
+   "options": "Qualification"
+  },
+  {
+   "fieldname": "passport_no",
+   "fieldtype": "Data",
+   "label": "Passport No"
+  },
+  {
+   "fieldname": "notes_tab",
+   "fieldtype": "Tab Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Notes",
+   "options": "Notes"
+  },
+  {
+   "fieldname": "notes_html",
+   "fieldtype": "HTML",
+   "label": "Notes HTML"
+  },
+  {
+   "columns": 3,
+   "fieldname": "files",
+   "fieldtype": "Table",
+   "label": "Files",
+   "options": "Attachments"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Photo"
+  },
+  {
+   "fieldname": "activities_tab",
+   "fieldtype": "Tab Break",
+   "label": "Activities"
+  },
+  {
+   "fieldname": "open_activities_html",
+   "fieldtype": "HTML",
+   "label": "Open Activities HTML"
+  },
+  {
+   "fieldname": "all_activities_section",
+   "fieldtype": "Section Break",
+   "label": "All Activities"
+  },
+  {
+   "fieldname": "all_activities_html",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "All Activities HTML"
+  },
+  {
+   "fieldname": "others_tab",
+   "fieldtype": "Tab Break",
+   "label": "Application",
+   "show_dashboard": 1
+  },
+  {
+   "fieldname": "custom_qualification_html",
+   "fieldtype": "HTML",
+   "label": "Custom Qualification HTML"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Password"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "interested_courses",
+   "fieldtype": "Table",
+   "label": "Interested Courses",
+   "options": "Interested Courses"
+  }
+ ],
+ "image_field": "photo",
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Application",
+   "link_fieldname": "Student"
+  }
+ ],
+ "modified": "2024-07-29 16:27:11.205634",
+ "modified_by": "Administrator",
+ "module": "Rawscholar",
+ "name": "Student",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "name1",
+ "track_changes": 1
+}
