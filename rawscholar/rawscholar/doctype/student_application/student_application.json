@@ -8,10 +8,11 @@
   "section_break_vyjx",
   "status",
   "student",
-  "country",
+  "email",
   "column_break_idby",
   "university",
-  "course"
+  "course",
+  "country"
  ],
  "fields": [
   {
@@ -21,12 +22,14 @@
   {
    "fieldname": "student",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Student",
-   "options": "Student"
+   "options": "Student",
+   "search_index": 1
   },
   {
    "fieldname": "country",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Country",
    "options": "Countries"
   },
@@ -39,24 +42,32 @@
   },
   {
    "fieldname": "university",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "University",
    "options": "University"
   },
   {
    "fieldname": "course",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Course",
    "options": "Courses"
   },
   {
    "fieldname": "column_break_idby",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "student.email",
+   "fetch_if_empty": 1,
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Student Email",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-08 19:29:28.242989",
+ "modified": "2025-07-08 20:51:40.316079",
  "modified_by": "Administrator",
  "module": "Rawscholar",
  "name": "Student Application",
