@@ -1,7 +1,7 @@
 // Copyright (c) 2024, Rawscholar dev team and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on("Application", {
+frappe.ui.form.on("Student Application", {
 	refresh(frm) {
         frm.set_query('university',(doc) =>{
             return {

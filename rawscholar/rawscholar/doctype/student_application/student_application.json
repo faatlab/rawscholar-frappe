@@ -6,11 +6,12 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_vyjx",
+  "status",
   "student",
   "country",
+  "column_break_idby",
   "university",
-  "course",
-  "status"
+  "course"
  ],
  "fields": [
   {
@@ -30,12 +31,6 @@
    "options": "Countries"
   },
   {
-   "fieldname": "course",
-   "fieldtype": "Link",
-   "label": "Course",
-   "options": "Courses"
-  },
-  {
    "default": "New",
    "fieldname": "status",
    "fieldtype": "Select",
@@ -47,14 +42,24 @@
    "fieldtype": "Link",
    "label": "University",
    "options": "University"
+  },
+  {
+   "fieldname": "course",
+   "fieldtype": "Link",
+   "label": "Course",
+   "options": "Courses"
+  },
+  {
+   "fieldname": "column_break_idby",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-14 18:01:54.227652",
+ "modified": "2025-07-08 19:29:28.242989",
  "modified_by": "Administrator",
  "module": "Rawscholar",
- "name": "Application",
+ "name": "Student Application",
  "owner": "Administrator",
  "permissions": [
   {
@@ -82,6 +87,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
