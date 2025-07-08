@@ -18,7 +18,6 @@ def generate_otp():
 def send_otp_email(email):
     """Send OTP email to the user"""
     otp = generate_otp()
-
     stored_otp = frappe.cache().get_value(f"otp:{email}")
     if stored_otp:
         frappe.cache().delete_value(f"otp:{email}")
@@ -70,7 +69,6 @@ def verify_otp(email, entered_otp):
 
 
 class Student(Document):
-
     def validate(self):
         """Hash the password before saving the Student document"""
         if self.password and not self.password.startswith("$2b$"):  # Prevent double hashing

@@ -2,7 +2,7 @@ app_name = "rawscholar"
 app_title = "Rawscholar"
 app_publisher = "Rawscholar dev team"
 app_description = "App for rawscholar"
-app_email = "goksrofficial@gmail.com"
+app_email = "rawscholar.dev@gmail.com"
 app_license = "mit"
 # required_apps = []
 
