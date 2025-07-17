@@ -46,6 +46,9 @@ def send_otp_email(email):
             recipients=email,
             subject=None,
             template="otp_verification_mail",
+            args={
+                "otp": otp,  # Make sure `otp` is defined in your code 
+            }
             delayed=False
         )
         return {"message": "Verification code sent successfully", "email": email, "otp": otp}
