@@ -8,6 +8,7 @@ from frappe.desk.notifications import notify_mentions
 from frappe.model.document import Document
 from frappe.utils import cstr, now, today
 from frappe.model.document import Document
+from datetime import datetime
 
 
 def generate_otp():
@@ -43,8 +44,8 @@ def send_otp_email(email):
         # Send Email
         frappe.sendmail(
             recipients=email,
-            subject=subject,
-            message=message,
+            subject=None,
+            template="otp_verification_mail",
             delayed=False
         )
         return {"message": "Verification code sent successfully", "email": email, "otp": otp}
@@ -69,6 +70,31 @@ def verify_otp(email, entered_otp):
 
 
 class Student(Document):
+    def autoname(self):
+        current_year = datetime.now().year
+        year_suffix = str(current_year)[-2:]  # Get last two digits of the year (YY)
+        prefix = f"RAW{year_suffix}"
+
+        last_id = frappe.db.sql(
+            """
+            SELECT name FROM `tabStudent`
+            WHERE name LIKE %s
+            ORDER BY name DESC
+            LIMIT 1
+            """,
+            (f"{prefix}-%",)
+        )
+
+        if last_id:
+            # Extract the last 3 digits and increment
+            last_num = int(last_id[0][0].split("-")[-1])
+            next_num = last_num + 1
+        else:
+            next_num = 1
+
+        sequence = f"{next_num:03d}"  # Pad with zeros to make 3 digits
+        self.name = f"{prefix}{sequence}"
+
     def validate(self):
         """Hash the password before saving the Student document"""
         if self.password and not self.password.startswith("$2b$"):  # Prevent double hashing

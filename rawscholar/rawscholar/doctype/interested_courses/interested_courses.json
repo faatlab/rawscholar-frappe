@@ -11,6 +11,7 @@
   "course",
   "university_name",
   "uni_id",
+  "location",
   "column_break_izow",
   "course_duration",
   "mode_of_course",
@@ -68,12 +69,17 @@
    "fieldname": "mode_of_course",
    "fieldtype": "Data",
    "label": "Mode"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-07-08 19:07:36.125453",
+ "modified": "2025-07-17 14:37:28.785740",
  "modified_by": "Administrator",
  "module": "Rawscholar",
  "name": "Interested Courses",
