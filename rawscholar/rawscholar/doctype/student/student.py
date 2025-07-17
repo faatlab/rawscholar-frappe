@@ -42,7 +42,7 @@ def send_otp_email(email):
     <a href="https://rawscholar.com">www.rawscholar.com</a> | <a href="mailto:rawscholar@gmail.com">rawscholar@gmail.com</a>
     """
     try:
-        html = render_template("your_app/templates/emails/reset_password_email.html")
+        html = render_template("rawscholar/templates/emails/reset_password_email.html")
         # Send Email
         frappe.sendmail(
             recipients=email,
