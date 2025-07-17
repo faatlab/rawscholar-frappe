@@ -9,6 +9,7 @@ from frappe.model.document import Document
 from frappe.utils import cstr, now, today
 from frappe.model.document import Document
 from datetime import datetime
+from frappe.utils.jinja import render_template
 
 
 def generate_otp():
@@ -41,14 +42,12 @@ def send_otp_email(email):
     <a href="https://rawscholar.com">www.rawscholar.com</a> | <a href="mailto:rawscholar@gmail.com">rawscholar@gmail.com</a>
     """
     try:
+        html = render_template("your_app/templates/emails/reset_password_email.html")
         # Send Email
         frappe.sendmail(
             recipients=email,
             subject=None,
-            template="otp_verification_mail",
-            args={
-                "otp": otp,  # Make sure `otp` is defined in your code 
-            }
+            template=html,
             delayed=False
         )
         return {"message": "Verification code sent successfully", "email": email, "otp": otp}
