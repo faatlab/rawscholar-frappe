@@ -38,7 +38,7 @@ def verify_student_login(email, password, exp_days):
 
 
 @frappe.whitelist(allow_guest=True)
-def signup_student(email, password, full_name):
+def signup_student(email, password, name1, phone):
     # Check if the email already exists
     existing_student = frappe.db.exists("Student", {"email": email})
     if existing_student:
@@ -49,7 +49,8 @@ def signup_student(email, password, full_name):
         "doctype": "Student",
         "email": email,
         "password": password,  
-        "full_name": full_name
+        "name1": name1,
+        "phone":phone
     })
     student.insert(ignore_permissions=True)
  
