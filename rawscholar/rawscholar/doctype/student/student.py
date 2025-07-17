@@ -38,7 +38,7 @@ def send_otp_email(email):
 
     Best regards,<br>
     <strong>Rawscholar</strong><br>
-    <a href="https://rawscholar.com">www.rawscholar.com</a> | <a href="mailto:rawscholarofficial@gmail.com">rawscholarofficial@gmail.com</a>
+    <a href="https://rawscholar.com">www.rawscholar.com</a> | <a href="mailto:rawscholar@gmail.com">rawscholar@gmail.com</a>
     """
     try:
         # Send Email
@@ -75,25 +75,12 @@ class Student(Document):
         year_suffix = str(current_year)[-2:]  # Get last two digits of the year (YY)
         prefix = f"RAW{year_suffix}"
 
-        last_id = frappe.db.sql(
-            """
-            SELECT name FROM `tabStudent`
-            WHERE name LIKE %s
-            ORDER BY name DESC
-            LIMIT 1
-            """,
-            (f"{prefix}-%",)
-        )
+        # Count existing students with this year prefix
+        like_pattern = f"{prefix}-%"
+        count = frappe.db.count("Student", {"name": ["like", like_pattern]}) + 1
 
-        if last_id:
-            # Extract the last 3 digits and increment
-            last_num = int(last_id[0][0].split("-")[-1])
-            next_num = last_num + 1
-        else:
-            next_num = 1
-
-        sequence = f"{next_num:03d}"  # Pad with zeros to make 3 digits
-        self.name = f"{prefix}{sequence}"
+        sequence = f"{count:03d}"  # Pad with zeros to make 3 digits
+        self.name = f"{prefix}-{sequence}"
 
     def validate(self):
         """Hash the password before saving the Student document"""
