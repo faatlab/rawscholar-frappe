@@ -6,7 +6,6 @@ from jwt.exceptions import ExpiredSignatureError, InvalidTokenError
 from frappe import _
 
 secret_key = frappe.get_conf().get("jwt_secret_key")
-secret_key = "Rawscholar"
 
 @frappe.whitelist(allow_guest=True)  # Allow API calls from React frontend
 def verify_student_login(email, password, exp_days):

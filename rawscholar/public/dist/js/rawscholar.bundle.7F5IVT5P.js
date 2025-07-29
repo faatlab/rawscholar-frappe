@@ -1,5 +1,5 @@
 (() => {
-  // frappe-html:/workspace/development/frappe-bench/apps/rawscholar/rawscholar/public/js/templates/student_notes.html
+  // frappe-html:/Users/faatlabtech/frappe-bench/apps/rawscholar/rawscholar/public/js/templates/student_notes.html
   frappe.templates["student_notes"] = `<div class="notes-section col-xs-12">
 	<div class="new-btn pb-3">
 		<button class="btn btn-sm small new-note-btn mr-1">
@@ -75,7 +75,7 @@
 
 </style>`;
 
-  // frappe-html:/workspace/development/frappe-bench/apps/rawscholar/rawscholar/public/js/templates/student_activities.html
+  // frappe-html:/Users/faatlabtech/frappe-bench/apps/rawscholar/rawscholar/public/js/templates/student_activities.html
   frappe.templates["student_activities"] = `<div class="open-activities">
 	<div class="new-btn pb-3">
 		<span>
@@ -253,7 +253,7 @@
 }
 </style>`;
 
-  // frappe-html:/workspace/development/frappe-bench/apps/rawscholar/rawscholar/public/js/templates/student_qualification.html
+  // frappe-html:/Users/faatlabtech/frappe-bench/apps/rawscholar/rawscholar/public/js/templates/student_qualification.html
   frappe.templates["student_qualification"] = `<div class="qualification-section col-xs-12">
 	<div class="all-qualification">
         {% if (qualifications.length) { %}
@@ -362,4 +362,4 @@
 
 </style>`;
 })();
-//# sourceMappingURL=rawscholar.bundle.HQBA264G.js.map
+//# sourceMappingURL=rawscholar.bundle.7F5IVT5P.js.map
