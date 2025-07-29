@@ -5,7 +5,8 @@ from datetime import datetime, timedelta, timezone
 from jwt.exceptions import ExpiredSignatureError, InvalidTokenError
 from frappe import _
 
-secret_key = frappe.get_conf().get("jwt_secret_key")
+# secret_key = frappe.get_conf().get("jwt_secret_key")
+secret_key = 'rawscholar'
 
 @frappe.whitelist(allow_guest=True)  # Allow API calls from React frontend
 def verify_student_login(email, password, exp_days):
